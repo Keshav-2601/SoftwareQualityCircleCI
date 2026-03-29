@@ -2,7 +2,7 @@ package org.example.Classes;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CalculatorTestClass {
+public class CalculatorTest {
     @Test
     public void additionTest(){
         CalculatorClass c=new CalculatorClass(5,6);
@@ -46,5 +46,9 @@ public class CalculatorTestClass {
         CalculatorClass c3=new CalculatorClass(10,2);
         int result3=c3.div();
         Assert.assertEquals(5,result3);
+
+        CalculatorClass c4=new CalculatorClass(-10,-5);
+        int result4=c4.div();
+        Assert.assertEquals(2,result4);
     }
 }
