@@ -47,7 +47,7 @@ public class CalculatorTest {
         int result3=c3.div();
         Assert.assertEquals(5,result3);
 
-        CalculatorClass c4=new CalculatorClass(-10,-5);
+        CalculatorClass c4=new CalculatorClass(10,5);
         int result4=c4.div();
         Assert.assertEquals(2,result4);
     }
