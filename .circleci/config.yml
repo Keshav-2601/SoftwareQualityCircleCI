@@ -6,16 +6,29 @@ jobs:
       - image: cimg/openjdk:24.0
     steps:
       - checkout
+
       - run:
           name: Check Java version
           command: java --version
+
       - run:
           name: Check Maven version
           command: mvn -version
+
       - run:
           name: Run tests
           command: mvn test
+
+      - run:
+          name: Show target folder
+          command: |
+            echo "Listing target directory"
+            ls -R target || true
+
       - store_test_results:
+          path: target/surefire-reports
+
+      - store_artifacts:
           path: target/surefire-reports
 
 workflows:
